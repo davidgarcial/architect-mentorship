@@ -1,0 +1,19 @@
+# Findings from Dockerfile — Session 01
+
+[Line 3]  Why sudo? why netcat? same for curl and wget — does the app actually need these?
+
+[Line 10] Why is sudo installed? (inline comment on the sudo package line)
+
+[Line 15] Why no password set for appuser?
+
+[Line 16] appuser is given NOPASSWD:ALL sudoers entry — full privilege escalation path from app to root
+
+[Line 21] chmod -R 777 /app — permissions are too permissive, should be minimal required
+
+[Line 26] Root login enabled in sshd_config — root should never be a login-capable SSH user in a container
+
+[Line 28] Hardcoded root password "password123" baked into the image layer
+
+[Line 38] Both port 8080 and port 22 exposed — do we need SSH exposed at all?
+
+[Line 42-43] Container runs as USER root — should run as non-root user
