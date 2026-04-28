@@ -1,0 +1,7 @@
+[Line 4]  Why sudo? why netcat? same for curl and wget the app need its?
+[Line 14]  at useradd Why no pwd? 
+[Line 14]  This is good non roor user appuser ALL=(ALL) 
+[Line 19]  cmod permisison are too permisive should be the minimal 
+[Line 22]  Root should not be in the dockerfile also why root? whe should not permit root login
+[Line 33 - 34]  Do we need both ports?
+[Line 37]  should run as nonroot
