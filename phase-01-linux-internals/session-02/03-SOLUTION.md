@@ -49,11 +49,3 @@
 + # Verify syntax before saving — a broken sudoers file locks out all sudo:
 + visudo -c -f /etc/sudoers
 
----
-
-## Session Summary
-
-Session complete.
-Covered: [fill in]
-Key insight: [fill in - the one thing that changed how you think]
-Gap identified: [fill in - where did you get stuck or miss something?]
